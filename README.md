@@ -39,7 +39,7 @@ Sample data in the form of a csv file is available `data` folder, which is a set
 
 [Link to Sample Data](./data/sample-data.csv)
 
-Note it’s in WKT format and you can assume that it’s WGS 84
+Note it’s in WKT format and you can assume that the coordinate system is WGS 84
 
 
 Additional Requirements:
@@ -48,6 +48,6 @@ Additional Requirements:
 2) For your presentation, you’re welcome to use whatever format you’d like. It could be a notebook (e.g., iPython), a powerpoint-style presentation, or an interactive dashboard.  Be creative and use whatever you’re most comfortable with.
 
 
-3) Please share your code ahead of time by creating a pull request in this repository. Make sure to add any instructions needed to run your code.
+3) Please share your code ahead of time (24 hours or more would be appreciated) by forking this repository and creating a pull request in your fork. Make sure to add any instructions needed to run your code.
 
 
