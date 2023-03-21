@@ -39,7 +39,7 @@ def percentage_area(df, area1, area2):
     return df[area1].intersection(df[area2]).area/df[area1].area*100
 
 
-def createPlots(df, title):
+def createPlotsPairs(df, title):
     import geopandas as gpd
     import matplotlib.pyplot as plt
     """
@@ -58,8 +58,35 @@ def createPlots(df, title):
         d = {'col1': ['Pair_a', 'Pair_b'], 'geometry': [df.Pair_a[slide], df.Pair_b[slide]]}
         new = gpd.GeoDataFrame(d, crs='EPSG:4326')
 
-        fig, ax = plt.subplots(figsize=(10, 30))
+        fig, ax = plt.subplots(figsize=(10, 15))
         new.plot(column = 'col1', ax=ax, alpha=0.5, aspect=0.9, cmap='tab20', legend= True)
         plt.title("{} \nID: {}".format(title, df.id[slide]))
         plt.show()
+        
+def createPlots(df, column, title):
+    import geopandas as gpd
+    import matplotlib.pyplot as plt
+    """
+    Creates geo graphs for the two Pair plots in one plot for each row in dataframe.
+    Parameters
+    ----------
+    df : DataFrame
+    column: string
+        column name 
+    title : string
+        title of plot
+    Returns
+    -------
+    matplotlib plot
+        returns plots
+    """
+    for slide in range(len(df)):
+        d = {'col1': [column], 'geometry': [df[column][slide]]}
+        new = gpd.GeoDataFrame(d, crs='EPSG:4326')
+
+        fig, ax = plt.subplots(figsize=(10, 15))
+        new.plot(column = 'col1', ax=ax, alpha=0.5, aspect=0.9, cmap='tab20', legend= True)
+        plt.title("{} \nID: {}".format(title, df.id[slide]))
+        plt.show()  
+    
     
