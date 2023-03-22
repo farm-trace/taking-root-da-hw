@@ -50,7 +50,10 @@ union_overlaps['union'] = union_overlaps['Pair_a'].union(union_overlaps['Pair_b'
 union_overlaps_df = union_overlaps[['id', 'intersect_plots', 'overlap_average_percent', 'union']]
 union_overlaps_df.to_csv('outputs/union_overlaps_df.csv', index= False)
 
-#saving full overlaps 
+#Needs Review
+needs_review_overlaps.to_csv('outputs/needs_review_overlaps.csv', index = False)
+
+#saving Full overlaps 
 full_overlaps_df = full_overlaps[['id', 'Pair_a', 'Pair_b', 'intersect_plots', 'overlap_average_percent']]
 full_overlaps_df.to_csv('outputs/full_overlaps_df.csv', index= False)
 
