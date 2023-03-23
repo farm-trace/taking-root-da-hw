@@ -31,7 +31,8 @@ gdf[['id', 'intersect_plots']].to_csv('outputs/intersect_plots.csv', index= Fals
 
 # new column for difference of the two plots, like an outer join of polygon shapes
 # Ones with POLYGON EMPTY will be flagged for project managers to address issue 
-gdf['difference'] = gdf['Pair_a'].difference(gdf['Pair_b'])
+gdf['difference_a'] = gdf['Pair_a'].difference(gdf['Pair_b'])
+gdf['difference_b'] = gdf['Pair_b'].difference(gdf['Pair_a'])
 
 # percentage of area of overlap for plot a and plot b
 gdf['overlap_area_plota_percent'] = percentage_area(gdf, 'Pair_a', 'Pair_b')
