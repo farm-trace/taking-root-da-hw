@@ -69,7 +69,7 @@ def createPlotsPairs(df, title, fig_size = (10, 15), aspect_size= 0.9, intersect
         new = gpd.GeoDataFrame(d, crs='EPSG:4326')
 
         fig, ax = plt.subplots(figsize=fig_size)
-        new.plot(column = 'col1', ax=ax, alpha=0.5, aspect=aspect_size, cmap='tab20', legend= True)
+        new.plot(column = 'col1', ax=ax, alpha=0.5, aspect=aspect_size, cmap='plasma', legend= True)
         plt.title("{} \nID: {}".format(title, df.id[slide]))
         plt.show()
         
@@ -99,7 +99,7 @@ def createPlots(df, column, title, fig_size = (10, 15), aspect_size= 0.9):
         new = gpd.GeoDataFrame(d, crs='EPSG:4326')
 
         fig, ax = plt.subplots(figsize=fig_size)
-        new.plot(column = 'col1', ax=ax, alpha=0.5, aspect=aspect_size, cmap='tab20', legend= True)
+        new.plot(column = 'col1', ax=ax, alpha=0.5, aspect=aspect_size, cmap='plasma', legend= True)
         plt.title("{} \nID: {}".format(title, df.id[slide]))
         plt.show()  
     
