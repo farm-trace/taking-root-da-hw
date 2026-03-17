@@ -1,4 +1,4 @@
-# Taking Root Data Analyst Take Home Exercise
+# Taking Root Lead, Data Science and Platform Take Home Exercise
 
 One challenge we face with quantifying carbon is when our client’s staff go out and trace farms, they sometimes have overlapping areas. These overlaps can be due to GPS errors if they’re small, or they could just be unclear farm boundaries. Here are some examples:
 
@@ -8,7 +8,6 @@ Figure A (Small Overlap Example)
 
 Figure B (Partial Overlap)
 ![Partial Overlap](./images/image2.png)
-
 
 Figure C (Nearly complete Overlap)
 ![Nearly complete Overlap](./images/image3.png)
